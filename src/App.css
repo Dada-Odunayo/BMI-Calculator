@@ -1,0 +1,41 @@
+.body {
+    background-image: linear-gradient(to right, rgb(202, 154, 23), orange, rgb(230, 144, 16), rgb(211, 177, 25));
+    margin: 70px 400px 50px 400px;
+    padding: 10vh;
+    border-radius: 15px;
+}
+
+.body label {
+    font-size: 2rem;
+    margin-right: 10px;
+}
+
+.body input {
+    width: 50%;
+    margin: 5px;
+    border-radius: 5px;
+    border: none;
+    height: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, serif;
+    font-weight: bolder;
+    font-size: 20px;
+    background-color: rgb(4, 49, 21);
+    color: rgb(205, 192, 218);
+}
+
+.body button {
+    margin-left: 180px;
+    margin-top: 30px;
+    font-family: Cambria;
+    font-size: 30px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(66, 102, 100);
+    color: rgb(212, 204, 204);
+}
+
+.bottom {
+    font-family: Georgia;
+    font-size: 1.5rem;
+    color: brown;
+}
