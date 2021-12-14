@@ -1,12 +1,18 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useState, useRef } from "react";
 import "./App.css";
-import { number } from "prop-types";
 
 function App() {
   const [weight, setWeight] = useState("");
   const [height, setHeight] = useState("");
   const [bmi, setBmi] = useState(null);
   const [status, setStatus] = useState("");
+  const clearRef = useRef(null);
+  const clearRef2 = useRef(null);
+
+  function handleClear() {
+    clearRef.current.value = "";
+    clearRef2.current.value = "";
+  }
 
   function Bmi() {
     let h = height / 100;
@@ -16,8 +22,8 @@ function App() {
     let bmiStatus = getStatus(bmii);
     setBmi(bmii);
     setStatus(bmiStatus);
-    setHeight("");
-    setWeight("");
+    //setHeight("");
+    //setWeight("");
   }
   function getStatus(bmii) {
     if (bmii < 18.5) return "underweight";
@@ -32,16 +38,32 @@ function App() {
         <h1>
           <center> Body Mass Index Calculator</center>
         </h1>
+
         <div className="app">
-          <label>Weight(kg):</label>
-          <input type="number" onChange={e => setWeight(e.target.value)} />
-          <br /> <br />
-          <label>Height(cm):</label>
-          <input type="number" onChange={e => setHeight(e.target.value)} />
-          <br />
+          <div className="app-inner">
+            <label>Weight(kg):</label>
+            <input
+              type="number"
+              ref={clearRef}
+              onChange={e => {
+                setWeight(e.target.value);
+              }}
+            />
+          </div>
+          <div className="app-inner">
+            <label>Height(cm):</label>
+            <input
+              type="number"
+              ref={clearRef2}
+              onChange={e => {
+                setHeight(e.target.value);
+              }}
+            />
+          </div>
           <button type="submit" onClick={Bmi}>
             calculate
           </button>
+          <button onClick={handleClear}>Clear</button>
           {status && (
             <div className="bottom">
               {" "}

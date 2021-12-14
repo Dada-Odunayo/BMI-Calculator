@@ -1,7 +1,7 @@
 .body {
     background-image: linear-gradient(to right, rgb(202, 154, 23), orange, rgb(230, 144, 16), rgb(211, 177, 25));
     margin: 70px 400px 50px 400px;
-    padding: 10vh;
+    padding: 5vh;
     border-radius: 15px;
 }
 
@@ -24,7 +24,7 @@
 }
 
 .body button {
-    margin-left: 180px;
+    margin-left: 20%;
     margin-top: 30px;
     font-family: Cambria;
     font-size: 30px;
@@ -38,4 +38,15 @@
     font-family: Georgia;
     font-size: 1.5rem;
     color: brown;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+}
+
+.app-inner {
+    display: flex;
+    padding: 5%;
 }
