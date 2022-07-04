@@ -63,7 +63,7 @@ function App() {
           <button type="submit" onClick={Bmi}>
             calculate
           </button>
-          <button onClick={handleClear}>Clear</button>
+          <button onClick={handleClear}>clear</button>
           {status && (
             <div className="bottom">
               {" "}

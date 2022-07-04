@@ -1,7 +1,7 @@
 .body {
     background-image: linear-gradient(to right, rgb(202, 154, 23), orange, rgb(230, 144, 16), rgb(211, 177, 25));
-    margin: 70px 400px 50px 400px;
-    padding: 5vh;
+    margin:100px 150px;
+    padding: 2vh;
     border-radius: 15px;
 }
 
@@ -43,7 +43,7 @@
 .app {
     display: flex;
     flex-direction: column;
-    padding: 5%;
+    padding: 2%;
 }
 
 .app-inner {
